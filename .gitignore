@@ -1,0 +1,7 @@
+.env
+# The binary `go build` makes.
+/out
+/velixir-pocketbase
+*.exe
+# PocketBase's data when you run it on your own machine.
+pb_data/

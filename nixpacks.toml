@@ -1,0 +1,19 @@
+# Build settings for velixir's builder (Nixpacks).
+#
+# PocketBase 0.40 needs Go 1.27, newer than the builder's own Go. The compiler comes from a
+# pinned nixpkgs snapshot (the nixos-unstable channel of 2026-09-25, the same one the OpenClaw
+# template uses). Bump the commit to move to a newer Go.
+#
+# Listing the packages replaces what the builder would detect rather than adding to it.
+[phases.setup]
+nixPkgs = ["go_1_27"]
+nixpkgsArchive = "e94cb152ed51bd6e24eb4a41f1460252beb52cd2"
+
+# Pure Go (PocketBase's SQLite driver needs no C compiler), so the binary runs anywhere.
+[variables]
+CGO_ENABLED = "0"
+
+# The binary directly, so the stop signal on a redeploy reaches PocketBase, which closes the
+# database cleanly. With no arguments it serves on $PORT (see main.go).
+[start]
+cmd = "./out"

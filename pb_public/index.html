@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PocketBase</title>
+<!--
+  Served from pb_public/. Replace this folder with your own front end (a built single-page app
+  works: unknown paths fall back to index.html) and redeploy.
+-->
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body { margin:0; min-height:100vh; background:#0b0b10; color:#e8e8ef;
+         font:15px/1.6 ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif; }
+  .wrap { max-width:38rem; margin:0 auto; padding:3rem 1.25rem 4rem; }
+  h1 { font-size:1.5rem; margin:0 0 .25rem; letter-spacing:-.02em; }
+  .sub { color:#7a7a8c; font-size:.875rem; margin:0 0 2rem; }
+  a { color:#c7d2fe; }
+  code { background:#16161f; border:1px solid #26263a; border-radius:5px;
+         padding:.1rem .35rem; color:#c7d2fe; font-size:.8125rem; overflow-wrap:anywhere; }
+  ul { padding-left:1.25rem; margin:0 0 1.5rem; }
+  li { margin-bottom:.6rem; }
+  .note { color:#7a7a8c; font-size:.8125rem; }
+  footer { color:#4b4b5c; font-size:.75rem; margin-top:2.5rem; text-align:center; }
+  footer a { color:#7a7a8c; }
+</style>
+<div class="wrap">
+  <h1>Your PocketBase is running</h1>
+  <p class="sub">A database, auth, file storage and realtime API in one place.</p>
+  <ul>
+    <li><a href="/_/">Open the dashboard</a> and sign in with the superuser from the deploy log.</li>
+    <li>Your API is at <code>/api/</code>. Point the
+      <a href="https://pocketbase.io/docs/client-side-sdks/">JavaScript or Dart SDK</a> at this address.</li>
+    <li>This page comes from <code>pb_public/</code> in your repository. Put your own front end there.</li>
+  </ul>
+  <p class="note">Health check: <code>/healthz</code></p>
+  <footer>PocketBase, running on <a href="https://velixir.net">velixir</a></footer>
+</div>
+</html>

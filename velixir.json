@@ -1,0 +1,12 @@
+{
+  "name": "PocketBase",
+  "tagline": "A whole backend in one small app: database, user sign-in, file storage, realtime and an admin dashboard, kept safe on a persistent volume.",
+  "description": "PocketBase gives your web or mobile app a backend in minutes: collections you design in a dashboard, a REST API with access rules, email and OAuth2 sign-in, file uploads and realtime subscriptions, all from one tiny process. Deploying it adds a persistent volume for the database and uploaded files, so they survive restarts and redeploys, with daily snapshots you can restore from the app's Volume tab. Nobody can claim your instance: the first start creates the superuser itself and prints the password once to the deploy log. It is the upstream PocketBase built as a Go framework, so JS hooks, JS migrations and a public folder for your front end work exactly as in the official binary, and you can extend it in Go. It idles at about 15 MB, so the smallest paid plan has plenty of room.",
+  "language": "Go",
+  "accent": "#B8DBE4",
+  "tags": ["Backend", "SQLite", "Volume"],
+  "topics": ["pocketbase", "backend", "sqlite", "realtime", "auth", "go"],
+  "minMemoryMb": 256,
+  "alwaysOn": true,
+  "volume": { "mountPath": "/data", "limitGb": 5 }
+}
