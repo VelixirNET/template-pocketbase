@@ -7,6 +7,6 @@
   "tags": ["Backend", "SQLite", "Volume"],
   "topics": ["pocketbase", "backend", "sqlite", "realtime", "auth", "go"],
   "minMemoryMb": 256,
-  "alwaysOn": true,
+  "requiresVolume": true,
   "volume": { "mountPath": "/data", "limitGb": 5 }
 }
